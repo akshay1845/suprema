@@ -1,0 +1,101 @@
+<%- include('./header.ejs'); %>
+
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <title>UserSearch Page</title>
+    <link href="./css/bootstrap.css" rel="stylesheet" type="text/css" />
+    <script src="./js/bootstrap.js" type="text/javascript"></script>
+
+    <style>
+      input{
+        width: 400px;
+      }
+      table,th,td{
+           border: 1px solid black;
+           border-collapse: collapse;
+           padding: 8px;
+           margin: 5px;
+           text-align: center;      
+         }
+         form {
+        /* margin-top: 5%; */
+        text-align: center;
+        position: fixed;
+      }
+    </style>   
+  </head>
+  <body>
+
+    <div >
+
+      <form  method="post" action="/">
+        <label for="search" id="search">Serach User:</label>
+        <span style="border:1px solid black; padding: 3px;">
+
+          <input type="text" name="search" style="border:none; background: none;" />
+          <button type="submit" style="border:none; background:none; padding-right: 5px;"/>
+          <img
+              src="../public/searchIcon.png"
+              alt="seachIcon"
+            /></button><br /><br />
+        </span>
+
+        <span style="font-size:13px">
+          NOTE: Copy Contact ID from Cardholder Details above
+        </span>
+      </form>
+
+      <table style="width:80%; margin-left: 10%;">
+        <thead>
+          <tr>  
+            <th>Id</th>
+            <th>User Name</th>
+            <th>Fingerprint</th>
+            <th>Face ID</th>
+            <th>Action</th>          
+          </tr>
+        </thead>
+        <tr>
+          <td>1</td>
+          <td>Akshay</td>
+          <td>Done</td>
+          <td>Done</td>
+          <td style="color:#ee5731; cursor: pointer;">Done</td>
+        </tr>
+        <tr>
+          <td>2</td>
+          <td>Jignesh</td>
+          <td>Pending</td>
+          <td>Pending</td>
+          <td style="color:#ee5731; cursor: pointer;">Pending</td>
+        </tr>
+        <!--  <tbody>
+          {users.map((user, idx) => {
+            return (
+              <tr key={idx}>
+                <td>{user.id}</td> 
+                <td>{user.firstName}</td>
+                <td>{user.fingerprintCount}</td>
+                <td>{user.faceCount}</td>
+                <td>
+                  <span
+                    className={styles.editAction}
+                  >
+                    Edit User
+                  </span>
+                </td>
+              </tr>
+            );
+          })}  
+        </tbody>  -->
+      </table>
+    </div>
+
+  </body>
+</html>

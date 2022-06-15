@@ -1,0 +1,172 @@
+<%- include('./header.ejs'); %>
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <title>UserDeatils Page</title>
+    <link href="./css/bootstrap.css" rel="stylesheet" type="text/css" />
+    <script src="./js/bootstrap.js" type="text/javascript"></script>
+
+    <style>
+      *{
+        padding: 0px;
+        margin: 0px;
+      }
+      .UserDeatilsContainer {
+        margin-top: 15px;
+        text-align: center;
+        position: fixed;
+        font-size: 12px;
+        overflow-y: hidden !important;
+      }
+      .UserDeatilsInline,
+      .dataInline {
+        float: left;
+        display: flex;
+        flex-direction: column;
+      }
+      /* .d-inline{
+         float:left;
+      } */
+      .subContainer {
+        border: 1px solid black;
+        width: 560px;
+        height: 150px;
+        margin: 30px 20px;
+      }
+      .deviceOption {
+        border-bottom: 1px solid black;
+      }
+      .col1 button {
+        width: 150px;
+        margin-top: 5px;
+        margin-bottom: 5px;
+        background-color: transparent;
+        border: 1px solid #ee5731;
+      }
+
+      .col2 .middleContainer {
+        border: 1px solid black;
+        width: 200px;
+        height: 55px;
+      }
+      .col3 button {
+        width: 150px;
+        margin-top: 5px;
+        margin-bottom: 5px;
+        background-color: transparent;
+        border: 1px solid #ee5731;
+        margin-left: 5px;
+      }
+      .col3 .btn5 {
+        /* margin-left: 375px; */
+      }
+      .bottomBox {
+        margin-top: 159px;
+        background-color: #e3e9ef;
+      }
+      .results {
+        background-color: #e3e9ef;
+        width: 100vw;
+        padding: 5px;;
+      }
+    </style>
+  </head>
+  <body>
+    <div>
+      <div class="UserDeatilsContainer">
+        <div class="identifierRow" style="margin-left: 85px;">
+          <div class="identifiercol UserDeatilsInline">
+            <div class="identifierDiv">
+              <span class="identifierSpan">Identifier:</span>
+              <input type="text" style="width: 30x; margin-right: 10px" />
+            </div>
+          </div>
+          <div class="fnameCol UserDeatilsInline">
+            <div class="fnameDiv">
+              <span class="fnameSpan">FirstName:</span>
+              <input
+                style="width: auto; margin-right: 10px"
+                type="text"
+                disabled
+              />
+            </div>
+          </div>
+          <div class="deviceCol UserDeatilsInline">
+            <div class="deviceDiv">
+              <span class="deviceSpan">Device Type:</span>
+              <select style="width: auto">
+                <option value="phone1">phone1</option>
+                <option value="phone2">phone2</option>
+                <option value="phone3">phone3</option>
+                <option value="phone4">phone4</option>
+                <option value="phone5">phone5</option>
+              </select>
+            </div>
+          </div>
+        </div>
+        <div class="subContainer">
+          <div class="deviceOption">
+            <div class="fingerPrint deviceInline" style="margin-left: 200px">
+              <img
+                src="../public/fingerActive.png"
+                alt="finger"
+                style="border-bottom: 2px solid #ee5731; float: left"
+              />
+            </div>
+            <div class="faceId deviceInline" style="margin-right: 200px; padding: 5px;">
+              <img src="../public/face.png" alt="face" />
+            </div>
+          </div>
+          <div class="dataContainer" style="margin-top: 10px;">
+            <div class="row" style="height: 50vh">
+              <div class="col1 dataInline" style="margin-left: 23px;">
+                <button class="btn1">1st</button><br />
+                <button class="btn2">+Add</button>
+              </div>
+              <div class="col2 dataInline" style="margin-left: 5px;">
+                <div class="middleContainer"></div>
+              </div>
+              <div class="col3 dataInline">
+                <button class="btn3">scan</button><br />
+                <button class="btn4">delete</button><br />
+                <button class="btn5">validate</button>
+              </div>
+            </div>
+            <div class="container border border-2 bottomBox">
+              <div class="row box" style="margin-right: 350px; margin-top:150px;">
+                <div class="col-md-4">
+                  <button
+                    style="
+                      background-color: #ee5731;
+                      color: white;
+                      margin-right: 3px;        
+                      margin-left: -65px;;
+                    "
+                  >
+                    Enroll
+                  </button>
+                  <button>Cancel</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="results">
+        <div class="row box">
+          <div class="searchAgainArrowDiv">
+            <img src="../public/searchAgainArrow.png" alt="" />
+            <span>Search Again</span>
+            <img src="../public/result.png" alt="" />
+            <span>Back to Results</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
